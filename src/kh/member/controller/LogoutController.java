@@ -1,4 +1,4 @@
-package kh.home.controller;
+package kh.member.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,26 +8,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HomeController
+ * Servlet implementation class LogoutController
  */
-@WebServlet({"/", "/main", "/index","/home"}) // 여기서 / 없으면 오류뜸
-public class HomeController extends HttpServlet {
+@WebServlet("/logout")
+public class LogoutController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HomeController() {
+    public LogoutController() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//2.db 갔다와서 게시판 데이터 뿌리기
-		request.setAttribute("boardlist", "값");
-		request.getRequestDispatcher("/WEB-INF/view/index.jsp").forward(request, response);
+		
+		request.getSession().invalidate(); // 세션영역에서 로그인 한 id 지우고
+		response.sendRedirect(request.getContextPath()+"/"); // homecontroller로 가는
 	}
 
 }

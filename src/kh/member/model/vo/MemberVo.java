@@ -6,7 +6,7 @@ package kh.member.model.vo;
  * TEST_MEMBER 테이블을 이용하여
  * 0. 첫화면("/", index.jsp)에서 include형태로 header.jsp 넣음. header에 로그인(login Get) 버튼 만들고 - 로그인 되면 로그아웃(logout Get) 버튼으로 토글, nav에 내정보보기(myinfo get) 버턴 구현
  * 로그인 화면에서 로그인 누르면 login post/ 회원가입 버튼 누르면 enroll get으로
- * 1. 회원가입("/enroll") 구현-- 로그인화면 하단에 회원가입 버튼 --get enroll.jsp, post 회원가입 db다녀와서 첫화면으로 이동
+ * 1. 회원가입("/enroll") 구현-- 로그인화면 하단에 회원가입 버튼 --get enroll.jsp, post 회원가입 db다녀와서 첫화면으로 이동. id중복확인
  * 회원가입 화면 - 회원가입 (enroll post)버튼 
  * 2. 로그인("/login") 기능 구현 --Get이면 login.jsp로 포워드  / post 로그인확인db 다녀와서 session("lgnss")에 등록하는데, 이름, email, id를 저장 후 첫 화면 이동
  * 3. 로그아웃("/logout") 기능 구현 -- Get 세션만료 후 첫 화면 이동
