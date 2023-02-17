@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>서버프로그램 구현</h1>
+	<img src="<%=request.getContextPath()%>/resources/images/160741237845610.jpg">
 	<jsp:include page="/WEB-INF/view/header.jsp"/>
 	
 	<c:if test="${not empty lgnss}">
