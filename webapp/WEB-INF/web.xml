@@ -9,13 +9,27 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet-mapping>
+  	<servlet-name>default</servlet-name>
+  	<url-pattern>*.js</url-pattern>
+  	<url-pattern>*.css</url-pattern>
+  	<url-pattern>*.jpg</url-pattern>
+  	<url-pattern>*.png</url-pattern>
+  	<url-pattern>*.ico</url-pattern>
+  	<url-pattern>*.swf</url-pattern>
+  	<url-pattern>*.gif</url-pattern>
+  </servlet-mapping>
+  
   <filter>
   	<filter-name>EncodingFilter</filter-name> <!-- 대소문자 구분 상관없음-->
-  	<filter-class>kh.common.filter.EncodingFilter</filter-class>  <!-- 이 클래스 이름으로 위에 것 쓰는--> 
+  	<filter-class>kh.common.filter.EncodingFilter</filter-class> <!-- 이 클래스 이름으로 위에 것 쓰는-->
   </filter>
   <filter-mapping>
   	<filter-name>EncodingFilter</filter-name>
-  	<url-pattern>/*</url-pattern> <!-- 모든 url에 이 필터는 거쳤다 가게 하는-->
-<!--   	<url-pattern>/*.do</url-pattern>특정 이름 가진 것만 이 필터 거치게 -->
+  	<url-pattern>/*</url-pattern><!-- 모든 url에 이 필터는 거쳤다 가게 하는-->
+  	<!--   	<url-pattern>/*.do</url-pattern>특정 이름 가진 것만 이 필터 거치게 -->
   </filter-mapping>
+  
+  
 </web-app>
