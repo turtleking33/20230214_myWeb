@@ -56,7 +56,7 @@ public class JDBCTemplate {
 	public static void commit(Connection conn) {
 		try {
 			if(conn!=null&&!conn.isClosed())
-				conn.close();
+				conn.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
