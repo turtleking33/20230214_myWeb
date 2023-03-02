@@ -13,6 +13,8 @@ public class BoardService {
 	public int  getCountBoard() {
 		int result = 0;
 		Connection conn = JDBCTemplate.getConnection();
+//		conn.setAutoCommit(autoCommit);
+//		commit(conn); rollback(conn);
 		result = new BoardDao().getCountBoard(conn);
 		System.out.println("srv:"+ result);
 		JDBCTemplate.close(conn);
